@@ -19,8 +19,10 @@ You'll be typing commands here for the rest of setup. Nothing you type here is s
 
 Git is the tool that copies (and later, updates) this kit from wherever it's hosted onto your machine. If you don't already have it:
 
-- **Windows:** install [Git for Windows](https://git-scm.com/download/win) — this also gives you "Git Bash," a terminal that behaves more like a Mac/Linux one, which is worth using instead of PowerShell for the rest of this kit.
+- **Windows:** install [Git for Windows](https://git-scm.com/downloads/win). This is only to get the kit onto your machine — you can keep using plain PowerShell for everything else. (Git for Windows also gives Claude Code an optional extra capability later on, but you don't need to think about that now.)
 - **Mac:** open Terminal and type `git --version` — if it's not installed, macOS will prompt you to install the developer command line tools.
+
+New to the terminal entirely? Claude Code's own [terminal guide](https://code.claude.com/docs/en/terminal-guide) walks through the absolute basics for both Windows and Mac before you go any further.
 
 Then, in your terminal:
 
@@ -37,9 +39,19 @@ Go to **[claude.com/claude-code](https://claude.com/claude-code)** and follow th
 
 We're deliberately not pasting exact install commands into this file. Claude Code changes fast — install methods that were correct a few months ago (npm-based installs, for example) have already gone stale once. The docs page is always more current than anything written here. If this file and the docs page ever disagree, trust the docs page.
 
+Don't want a terminal-based tool at all? There's also a [Desktop app](https://claude.com/download) that gives you Claude Code without typing commands. This kit assumes the terminal version, because learning the terminal a little is part of the point — but the app exists if you want to try Claude Code itself first before committing to that.
+
+**Before you go further, confirm the install actually worked.** Open a fresh terminal and run:
+
+```
+claude --version
+```
+
+You should see a version number print out (something like `2.1.211 (Claude Code)`). If instead you get "command not found" or a similar error, don't move on — that's a real problem to solve, not something to push past. `claude doctor` gives a more detailed diagnosis if you're stuck.
+
 ## Step 4 — Log in
 
-The installer will prompt you to authenticate — this opens a browser window and links Claude Code to your Claude account. You need an active Claude subscription or API access for this to work; a free claude.ai account alone isn't enough.
+The installer will prompt you to authenticate — this opens a browser window and links Claude Code to your Claude account. **You need a paid Claude plan (Pro or above) for this to work — the free claude.ai plan does not include Claude Code access.** Confirm this before you get this far, so it's not a surprise at the login screen.
 
 ## Step 5 — Open this folder in Claude Code
 
