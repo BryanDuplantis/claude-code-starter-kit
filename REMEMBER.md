@@ -1,6 +1,8 @@
-# Memory
+# Remember
 
 This is where Claude writes down things worth remembering between sessions — because by default, it forgets everything the moment a conversation ends. Every new session starts from zero unless something was written down here (or in `GOTCHAS.md`) first.
+
+(Claude Code also has a built-in memory feature that saves notes to its own file outside this folder. That's fine — the two don't conflict. The difference is that this one lives *in your project*, where you can read it, edit it, and carry it with you.)
 
 That's not a flaw to work around — it's the same problem you solve for yourself with any notes app, calendar, or reminder. This file is Claude's version of that.
 

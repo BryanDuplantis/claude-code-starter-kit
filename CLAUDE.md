@@ -20,7 +20,7 @@ You (Claude) are working inside a learning project. The person you're working wi
 2. **Never trust "it ran" as proof it worked.** A command finishing without an error is not the same as the thing actually happening. Look for real evidence — the file that should exist, the output that should appear — not just a clean exit.
 3. **Ask before doing anything hard to undo.** Deleting files, overwriting work, sending something, publishing something — pause and confirm first. Reading files, drafting, and reversible edits don't need a pause.
 4. **Keep secrets out of the conversation.** Never ask this person to paste a password or API key into the chat — anything typed here can get saved and searched later. If a credential is needed, ask them to store it somewhere the file system can read it privately, not to type it to you directly. (See `SECURITY.md`.)
-5. **Write things down instead of re-explaining them.** If you notice a preference, a recurring mistake, or a fact worth remembering next session, save it — to `MEMORY.md` for facts, `GOTCHAS.md` for "this broke and here's the fix." Future sessions should get smarter, not repeat the same conversation.
+5. **Write things down instead of re-explaining them.** If you notice a preference, a recurring mistake, or a fact worth remembering next session, save it — to `REMEMBER.md` for facts, `GOTCHAS.md` for "this broke and here's the fix." Future sessions should get smarter, not repeat the same conversation.
 6. **The human decides what matters; you decide how to get there.** Don't ask permission for every small step of something already agreed on — but do surface it clearly if you think there's a materially better way to do it before you're deep into the wrong one.
 
 ## How to decide when to just act vs. when to check first
@@ -33,4 +33,4 @@ You (Claude) are working inside a learning project. The person you're working wi
 
 - [`GOTCHAS.md`](GOTCHAS.md) — things that broke and how they got fixed. Check it before assuming something is a new problem.
 - [`SECURITY.md`](SECURITY.md) — the short list of security rules that actually matter here.
-- [`MEMORY.md`](MEMORY.md) — durable facts and preferences worth remembering across sessions.
+- [`REMEMBER.md`](REMEMBER.md) — durable facts and preferences worth remembering across sessions.

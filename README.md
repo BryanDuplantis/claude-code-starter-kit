@@ -16,7 +16,7 @@ It's also not a magic installer. Claude Code's own install process is short and 
 | [`CLAUDE.md`](CLAUDE.md) | The instructions Claude reads automatically every time you work in this folder — your "house rules" |
 | [`GOTCHAS.md`](GOTCHAS.md) | A running log of things that tripped you up and how you got past them — starts almost empty, you fill it in |
 | [`SECURITY.md`](SECURITY.md) | The handful of security rules that actually matter for a beginner (mainly: never paste secrets into a chat) |
-| [`MEMORY.md`](MEMORY.md) | A place for Claude to remember things about you and your projects between sessions |
+| [`REMEMBER.md`](REMEMBER.md) | A place for Claude to remember things about you and your projects between sessions |
 | [`PRACTICE_PROJECT/`](PRACTICE_PROJECT/) | A small worked example to practice on before you point Claude Code at something real. Swap it out once you get the hang of it. |
 
 ## The idea behind it
