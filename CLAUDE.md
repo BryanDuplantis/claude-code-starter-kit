@@ -31,6 +31,12 @@ You (Claude) are working inside a learning project. The person you're working wi
 
 ## Where the rest of the rules live
 
-- [`GOTCHAS.md`](GOTCHAS.md) — things that broke and how they got fixed. Check it before assuming something is a new problem.
-- [`SECURITY.md`](SECURITY.md) — the short list of security rules that actually matter here.
-- [`REMEMBER.md`](REMEMBER.md) — durable facts and preferences worth remembering across sessions.
+The three lines below start with `@` on purpose — that's Claude Code's import syntax, and it means these files get read automatically along with this one at the start of every session. A plain link wouldn't do that; Claude would only see the filename, not what's inside.
+
+One heads-up: if you start a session in a *subfolder* (like `PRACTICE_PROJECT/`), Claude Code will ask your permission once before loading these, because from there they live outside the folder you launched in. That prompt is a safety feature, not a problem — approve it, and it won't ask again.
+
+@GOTCHAS.md — things that broke and how they got fixed. Check it before assuming something is a new problem.
+
+@SECURITY.md — the short list of security rules that actually matter here.
+
+@REMEMBER.md — durable facts and preferences worth remembering across sessions.
