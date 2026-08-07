@@ -25,7 +25,7 @@ Git is the tool that copies (and later, updates) this kit from wherever it's hos
 Then, in your terminal:
 
 ```
-git clone <the URL you were given for this kit>
+git clone https://github.com/BryanDuplantis/claude-code-starter-kit.git
 cd claude-code-starter-kit
 ```
 
