@@ -2,7 +2,9 @@
 
 Open a Claude Code session in this folder (`cd` into `PRACTICE_PROJECT/`, then run `claude`) and give it this, in your own words:
 
-> Read everything in `notes/`. Build a single `INDEX.md` file that lists each note by date with a one-line summary. Then write one new note of your own in `notes/` — anything, even two sentences — and update the index to include it.
+> Read everything in `notes/`. Build a single `INDEX.md` file **in this folder, next to this TASK.md file — not inside `notes/`** — that lists each note by date with a one-line summary. Then write one new note of your own in `notes/` — anything, even two sentences — and update the index to include it.
+
+(Why so specific about where the file goes? Because "put it somewhere sensible" has more than one sensible answer, and Claude may pick a different one than you would. Being precise about what you want is most of the skill.)
 
 Then:
 
