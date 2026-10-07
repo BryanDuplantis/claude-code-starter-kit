@@ -1,10 +1,10 @@
 # Remember
 
-This is where Claude writes down things worth remembering between sessions — because by default, it forgets everything the moment a conversation ends. Every new session starts from zero unless something was written down here (or in `GOTCHAS.md`) first.
+This is where Claude writes down things worth remembering between sessions, because by default, it forgets everything the moment a conversation ends. Every new session starts from zero unless something was written down here (or in `GOTCHAS.md`) first.
 
-(Claude Code also has a built-in memory feature that saves notes to its own file outside this folder. That's fine — the two don't conflict. The difference is that this one lives *in your project*, where you can read it, edit it, and carry it with you.)
+(Claude Code also has a built-in memory feature that saves notes to its own file outside this folder. That's fine. The two don't conflict. The difference is that this one lives *in your project*, where you can read it, edit it, and carry it with you.)
 
-That's not a flaw to work around — it's the same problem you solve for yourself with any notes app, calendar, or reminder. This file is Claude's version of that.
+That's not a flaw to work around. It's the same problem you solve for yourself with any notes app, calendar, or reminder. This file is Claude's version of that.
 
 ## What goes here
 
@@ -14,9 +14,9 @@ That's not a flaw to work around — it's the same problem you solve for yoursel
 
 ## What doesn't go here
 
-- Anything sensitive — passwords, financial details, health information. This file is meant to be readable, not a vault. (See `SECURITY.md`.)
+- Anything sensitive, like passwords, financial details, or health information. This file is meant to be readable, not a vault. (See `SECURITY.md`.)
 - Anything easily re-derived by just reading the project files.
 
 ---
 
-*(Empty for now — this fills in as you actually use the kit.)*
+*(Empty for now. This fills in as you actually use the kit.)*
