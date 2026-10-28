@@ -20,6 +20,7 @@ It's also not an installer. You type each setup command yourself, because Claude
 | [`SECURITY.md`](SECURITY.md) | The handful of security rules that matter most for a beginner (mainly: never paste secrets into a chat) |
 | [`REMEMBER.md`](REMEMBER.md) | A place for Claude to remember things about you and your projects between sessions |
 | [`PRACTICE_PROJECT/`](PRACTICE_PROJECT/) | A small worked example to practice on before you point Claude Code at something real. Swap it out once you get the hang of it. |
+| [`.claude/commands/stuck.md`](.claude/commands/stuck.md) | The `/stuck` command. Type it in Claude Code whenever you're stuck or unsure what to do next |
 
 ## What the practice task actually tests
 
@@ -36,8 +37,13 @@ Then you clear the conversation and tell Claude that summary is wrong, using a f
 
 - A fresh install and sign-in on a brand-new macOS user account, signing in with an existing Claude account, was run on 2026-10-28, through Step 6 of `GETTING_STARTED.md`. What it ran into (the PATH fix after install, the folder trust prompt, the sign-in pages) is now written into Steps 3 and 4.
 - The practice task was also run in that account the same day. It was hard to follow: when to open which file, what to check, and how the bluff proved anything. `PRACTICE_PROJECT/TASK.md` was rewritten as a step-by-step script with an exact false claim and a stated right answer.
+- `/stuck` was checked in non-interactive mode on 2026-10-28: it read `GETTING_STARTED.md` and `GOTCHAS.md`, gave one step at a time, and asked before offering to write to `GOTCHAS.md`.
 
-Not tested yet: sign-in with a brand-new Claude account, the rewritten practice task, pointing Claude at your own folders such as Downloads (and whatever macOS asks the first time), anything on a real Windows machine, the one-time import prompt as it appears in a live interactive session, and the house rule about explaining steps to a beginner, which only shows up in an interactive session.
+Not tested yet: sign-in with a brand-new Claude account, the rewritten practice task, `/stuck` in a live interactive session, pointing Claude at your own folders such as Downloads (and whatever macOS asks the first time), anything on a real Windows machine, the one-time import prompt as it appears in a live interactive session, and the house rule about explaining steps to a beginner, which only shows up in an interactive session.
+
+## Stuck?
+
+Once Claude Code is running in this folder, type `/stuck`, optionally followed by a few words about what went wrong. Before Claude Code is running, use the claude.ai fallback in Step 3 of [`GETTING_STARTED.md`](GETTING_STARTED.md).
 
 ## Where this came from
 

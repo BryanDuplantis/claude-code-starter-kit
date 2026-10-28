@@ -162,12 +162,20 @@ notepad PRACTICE_PROJECT\TASK.md
 
 Swap in any file name to read a different one, like `GOTCHAS.md`. Keep this second window open: the practice task uses it to open the files Claude makes.
 
-## If something breaks
+## If something breaks, or you're not sure what to do
 
-Paste the error text into Claude Code, then type:
+Once Claude Code is running in this folder, type:
 
 ```
-Check GOTCHAS.md for anything like this.
+/stuck
+```
+
+You can add a few words about what went wrong, like `/stuck the sign-in page never opened`. Claude asks what you were trying to do and what's on your screen, checks this guide and `GOTCHAS.md`, then walks you through one step at a time, telling you where to type each one. The command lives in `.claude/commands/stuck.md`, a plain text file you can read or change.
+
+Working in some other folder, where `/stuck` doesn't exist? Type this instead:
+
+```
+I'm new to Claude Code and I'm stuck. Ask me what I was trying to do and what I see on screen, then walk me through one step at a time.
 ```
 
 Once it's fixed, type:
