@@ -23,9 +23,9 @@ It's also not an installer. You type each setup command yourself, because Claude
 
 ## What the practice task actually tests
 
-The task has two rounds. In the first, Claude reads a handful of short journal notes and builds an index with a one-line summary of each. You check every summary against its note yourself.
+First, Claude reads four short, made-up diary entries and builds an index with a one-line summary of each. You check it yourself: four entries, and one summary you compare against its note.
 
-In the second, you pick a summary that is correct and tell Claude it's wrong anyway. You claim the note says something it doesn't. What you want to see is Claude re-reading the note, quoting what it actually says, and declining to change a summary that was right. An assistant that accepts your bluff will also accept an honest mistake from you, so this round tells you which kind you're working with while the stakes are five fake journal entries.
+Then you clear the conversation and tell Claude that summary is wrong, using a false claim the task gives you word for word. Because you just read that note, you already know the right answer. What you want to see is Claude re-reading the note, saying what it actually says, and declining to change a summary that was right. An assistant that accepts your bluff will also accept an honest mistake from you, so this tells you which kind you're working with while the stakes are four fake diary entries.
 
 ## How this was verified
 
@@ -35,8 +35,9 @@ In the second, you pick a summary that is correct and tell Claude it's wrong any
 - The Windows instructions were checked against Anthropic's current setup docs instead of written from memory ([`63f9bd2`](https://github.com/BryanDuplantis/claude-code-starter-kit/commit/63f9bd2)).
 
 - A fresh install and sign-in on a brand-new macOS user account, signing in with an existing Claude account, was run on 2026-10-28, through Step 6 of `GETTING_STARTED.md`. What it ran into (the PATH fix after install, the folder trust prompt, the sign-in pages) is now written into Steps 3 and 4.
+- The practice task was also run in that account the same day. It was hard to follow: when to open which file, what to check, and how the bluff proved anything. `PRACTICE_PROJECT/TASK.md` was rewritten as a step-by-step script with an exact false claim and a stated right answer.
 
-Not tested yet: sign-in with a brand-new Claude account, the practice task in its current form (the 2026-08-07 run used an earlier version that started Claude Code inside `PRACTICE_PROJECT/`), anything on a real Windows machine, the one-time import prompt as it appears in a live interactive session, and the house rule about explaining steps to a beginner, which only shows up in an interactive session.
+Not tested yet: sign-in with a brand-new Claude account, the rewritten practice task, pointing Claude at your own folders such as Downloads (and whatever macOS asks the first time), anything on a real Windows machine, the one-time import prompt as it appears in a live interactive session, and the house rule about explaining steps to a beginner, which only shows up in an interactive session.
 
 ## Where this came from
 

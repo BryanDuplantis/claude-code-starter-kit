@@ -160,7 +160,7 @@ On Windows, this opens it in Notepad:
 notepad PRACTICE_PROJECT\TASK.md
 ```
 
-Swap in any file name to read a different one, like `GOTCHAS.md`.
+Swap in any file name to read a different one, like `GOTCHAS.md`. Keep this second window open: the practice task uses it to open the files Claude makes.
 
 ## If something breaks
 
