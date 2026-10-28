@@ -30,11 +30,13 @@ In the second, you pick a summary that is correct and tell Claude it's wrong any
 ## How this was verified
 
 - The practice task was run end to end on 2026-08-07, using Claude Code in non-interactive mode. Both rounds passed. Every summary matched its note when checked by hand. On the false correction, Claude re-read the note, quoted the real line, asked whether a different date was meant, and changed no files (checked with `git status`).
-- `CLAUDE.md` loads when you start Claude Code inside `PRACTICE_PROJECT/`, which is what the task tells you to do. Checked by asking Claude to recite its house rules from that folder.
+- `CLAUDE.md` also loads when you start Claude Code inside `PRACTICE_PROJECT/`, which is how the task used to tell you to run it. Checked by asking Claude to recite its house rules from that folder.
 - The `@` imports in `CLAUDE.md` were checked from both folders ([`91f7ce5`](https://github.com/BryanDuplantis/claude-code-starter-kit/commit/91f7ce5)). From the kit's main folder they load. From `PRACTICE_PROJECT/` they did not load in a non-interactive test. Anthropic's [memory docs](https://code.claude.com/docs/en/memory) say imports from outside the folder you launched in need a one-time approval in an interactive session, which is why `CLAUDE.md` tells you to expect that prompt there.
 - The Windows instructions were checked against Anthropic's current setup docs instead of written from memory ([`63f9bd2`](https://github.com/BryanDuplantis/claude-code-starter-kit/commit/63f9bd2)).
 
-Not tested yet: anything on a real Windows machine, the one-time import prompt as it appears in a live interactive session, a fresh install and login on a clean account, and the house rule about explaining steps to a beginner, which only shows up in an interactive session.
+- A fresh install and sign-in on a brand-new macOS user account, signing in with an existing Claude account, was run on 2026-10-28, through Step 6 of `GETTING_STARTED.md`. What it ran into (the PATH fix after install, the folder trust prompt, the sign-in pages) is now written into Steps 3 and 4.
+
+Not tested yet: sign-in with a brand-new Claude account, the practice task in its current form (the 2026-08-07 run used an earlier version that started Claude Code inside `PRACTICE_PROJECT/`), anything on a real Windows machine, the one-time import prompt as it appears in a live interactive session, and the house rule about explaining steps to a beginner, which only shows up in an interactive session.
 
 ## Where this came from
 
