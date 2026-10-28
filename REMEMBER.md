@@ -1,10 +1,10 @@
 # Remember
 
-This is where Claude writes down things worth remembering between sessions, because by default, it forgets everything the moment a conversation ends. Every new session starts from zero unless something was written down here (or in `GOTCHAS.md`) first.
-
-(Claude Code also has a built-in memory feature that saves notes to its own file outside this folder. That's fine. The two don't conflict. The difference is that this one lives *in your project*, where you can read it, edit it, and carry it with you.)
+This is where Claude writes down things to remember between sessions. Each new Claude Code session starts with a fresh conversation, so anything said in an earlier one is gone unless it was written down somewhere: here, in `GOTCHAS.md`, or in `CLAUDE.md`.
 
 That's not a flaw to work around. It's the same problem you solve for yourself with any notes app, calendar, or reminder. This file is Claude's version of that.
+
+(Claude Code also has a built-in feature called auto memory, where Claude saves its own notes as it works. Those live in a separate folder for each project, outside this kit, and you can browse them by typing `/memory` in a session. The two don't conflict. The difference is that this file lives *in your project*, where you can read it, edit it, and carry it with you.)
 
 ## What goes here
 

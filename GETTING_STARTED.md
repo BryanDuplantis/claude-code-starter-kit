@@ -6,7 +6,7 @@ Read this whole file before you touch a terminal. It's short.
 
 Claude Code is a command-line tool: you type instructions instead of clicking buttons. That's the whole trick behind why it's powerful: it can read your files, write code, run programs, and fix its own mistakes, because it's operating in the same environment you are, not a sandboxed chat window.
 
-That also means it's worth understanding each setup step instead of running something that does it all silently. You're not disabling anything by doing it by hand. Every step below is genuinely this short. Doing it once means the next time something looks broken, you'll actually recognize what changed.
+That also means you should understand each setup step instead of running something that does it all silently. Every step below is short. Doing it once by hand means the next time something looks broken, you'll recognize what changed.
 
 ## Step 1: Get a terminal open
 
@@ -35,11 +35,23 @@ You now have your own local copy. `git clone` downloaded it; `cd` moved your ter
 
 ## Step 3: Install Claude Code
 
-Go to **[claude.com/claude-code](https://claude.com/claude-code)** and follow the current install instructions for your OS.
+Type the install command for your system. These are copied from Anthropic's [setup page](https://code.claude.com/docs/en/setup). Claude Code changes often, so if anything here ever differs from that page, trust the page.
 
-We're deliberately not pasting exact install commands into this file. Claude Code changes fast. Install methods that were correct a few months ago (npm-based installs, for example) have already gone stale once. The docs page is always more current than anything written here. If this file and the docs page ever disagree, trust the docs page.
+**Windows (PowerShell):**
 
-Don't want a terminal-based tool at all? There's also a [Desktop app](https://claude.com/download) that gives you Claude Code without typing commands. This kit assumes the terminal version, because learning the terminal a little is part of the point, but the app exists if you want to try Claude Code itself first before committing to that.
+```
+irm https://claude.ai/install.ps1 | iex
+```
+
+**Mac (or Linux):**
+
+```
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Each one downloads Anthropic's installer from claude.ai and runs it. It shows no progress while it downloads, so give it a minute. On Windows, if you see `'irm' is not recognized`, you're in the older Command Prompt instead of PowerShell; go back to Step 1.
+
+Don't want a terminal-based tool at all? There's also a [Desktop app](https://claude.com/download) that runs Claude Code without typing commands. Anthropic's [Desktop docs](https://code.claude.com/docs/en/desktop) say it reads the same `CLAUDE.md` files as the terminal version, so this kit's house rules should carry over. This kit was written and tested with the terminal version only, though, so the steps below won't match the app screen for screen, and some things (like the one-time approval prompt mentioned in `CLAUDE.md`) may look different there.
 
 **Before you go further, confirm the install actually worked.** Open a fresh terminal and run:
 
@@ -49,19 +61,27 @@ claude --version
 
 You should see a version number print out (something like `2.1.211 (Claude Code)`). If instead you get "command not found" or a similar error, don't move on. That's a real problem to solve, not something to push past. `claude doctor` gives a more detailed diagnosis if you're stuck.
 
-## Step 4: Log in
+## Step 4: Start Claude Code and log in
 
-The installer will prompt you to authenticate. This opens a browser window and links Claude Code to your Claude account. **You need a paid Claude plan (Pro or above) for this to work. The free claude.ai plan does not include Claude Code access.** Confirm this before you get this far, so it's not a surprise at the login screen.
+A fresh terminal starts outside the kit folder, so move back into it first. If you cloned the kit from the folder your terminal opens in, that's:
 
-## Step 5: Open this folder in Claude Code
+```
+cd claude-code-starter-kit
+```
 
-Back in your terminal, from inside the `claude-code-starter-kit` folder:
+Then start Claude Code:
 
 ```
 claude
 ```
 
-You're now in a live Claude Code session, inside this folder.
+The first time you run it, Claude Code asks you to log in. It opens a browser window where you sign in and link Claude Code to your Claude account. **You need a paid Claude plan (Pro or higher) for this to work. The free claude.ai plan does not include Claude Code access.** Confirm this before you get this far, so it's not a surprise at the login screen.
+
+Once you're logged in, you're in a live Claude Code session, inside this folder.
+
+## Step 5: Check which mode it's in
+
+Look at the status line under the box where you type. A new session on a current version of Claude Code starts in **auto mode** and shows `⏵⏵ auto mode on`. In auto mode, Claude doesn't stop to ask before each file edit or command; a second model reviews its actions in the background and blocks risky ones, and Anthropic's [permission modes page](https://code.claude.com/docs/en/permission-modes) says plainly that this does not guarantee safety. Press `Shift+Tab` once to switch to **manual mode** (`⏸ manual mode on`), where Claude asks you before most file edits, commands, and network access. Pressing it again cycles through the other modes. To start in manual mode from the beginning, run `claude --permission-mode manual` instead of plain `claude`. Manual mode is a good choice while you're learning. The kit's house rule "ask before doing anything hard to undo" (in `CLAUDE.md`) is a written instruction, and Claude can miss one. Manual mode is enforced by Claude Code itself, so you see most actions before they happen.
 
 ## Step 6: Have it introduce itself
 
@@ -71,7 +91,9 @@ Type this into the session:
 Read CLAUDE.md and introduce yourself. What are your house rules, and what should I know before we start?
 ```
 
-This is the most important step in the whole kit. `CLAUDE.md` is a file Claude reads automatically at the start of every session in this folder. It's not magic, it's just a text file with instructions, and you can read it yourself any time in a normal text editor. Having Claude explain it back to you is a good way to confirm it actually loaded and to see the house rules in its own words.
+This is the most important step in the whole kit. `CLAUDE.md` is a file Claude reads automatically at the start of every session in this folder. It's a plain text file with instructions, and you can read it yourself any time in a normal text editor. Having Claude explain it back to you shows you the house rules in its own words.
+
+To check that it loaded from Claude Code's side, type `/context` and press Enter. Look for `CLAUDE.md` in the list under **Memory files**. If it's there, it loaded. If it's missing, Claude can't see your house rules, and that's a problem to fix before you go further.
 
 ## Step 7: Try the practice project
 
